@@ -1,4 +1,4 @@
-# Ansible Lab — Setting Up an Initial Ansible Project
+# Ansible Infrastructure Automation
 
 A hands-on lab demonstrating how to install Ansible on WSL2 (Windows), connect to AWS EC2 instances, and automate server configuration using playbooks.
 
