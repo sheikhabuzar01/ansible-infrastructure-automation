@@ -1,0 +1,16 @@
+# Ignore SSH keys — never upload to GitHub
+*.pem
+*.key
+id_rsa
+id_rsa.pub
+
+# Ansible retry files
+*.retry
+
+# Python
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+Thumbs.db

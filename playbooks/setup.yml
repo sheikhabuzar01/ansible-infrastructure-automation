@@ -1,0 +1,30 @@
+---
+- name: Initial Server Setup
+  hosts: webservers
+  become: yes
+
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install nginx, git, curl
+      apt:
+        name:
+          - nginx
+          - git
+          - curl
+        state: present
+
+    - name: Start and enable nginx
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: Create index page
+      copy:
+        content: "Server managed by Ansible!\n"
+        dest: /var/www/html/index.html
+        owner: www-data
+        mode: '0644'

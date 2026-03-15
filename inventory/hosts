@@ -1,0 +1,7 @@
+[webservers]
+my-server-1 ansible_host=<NODE1_PUBLIC_IP>
+my-server-2 ansible_host=<NODE2_PUBLIC_IP>
+
+[all:vars]
+ansible_user=ubuntu
+ansible_ssh_private_key_file=~/.ssh/server-key.pem
